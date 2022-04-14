@@ -7,6 +7,7 @@ box-sizing: border-box;
 html {
 font-size: 11px;
 font-family: "Roboto", sans-serif;
+scroll-behavior: smooth;
 }
 
 body {
@@ -433,6 +434,25 @@ font-size: 22px;
 
 #menuburger input:checked ~ ul {
   transform: none;
+}
+
+.info-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 6%;
+	padding: 0;
+	background: red;
+	color: white;
+}
+
+.info-section h3 {
+	font-size: 1.3rem;
+	font-weight: bold;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {

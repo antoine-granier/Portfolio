@@ -59,6 +59,22 @@
 			<h6>Mes récents projets</h6>
 		</div>
 		<div class="item-portfolio">
+			<div class="description-portfolio margin-right">
+				<h6>Développement Web (HTML/CSS, PHP, Javascript, HighChartJS, Ajax)</h6>
+				<h1>Version modernisée du site Theses.fr</h1>
+				<div class="fond">
+				<p>Le principal but de ce projet était de moderniser le site theses.fr et de mettre en avant un aspect non présent, la représentation visuelle des données. 
+					Pour cela l'utilisation d'une librairie Javascript était indispensable. L'inconvénient du projet était l'utilisation d'une base de données contenant une 
+					imposante table de 500 000 lignes. Ainsi, pour une utilisation agréable du site l'aspect d'optimisation a été nécessaire (optimisation des requêtes SQL, 
+					mise en place d'index judicieusement choisis).
+				</p>
+				</div>
+			</div>
+			<div class="image-portfolio">
+				<img src="Images\theses.png">
+			</div>
+		</div>
+		<div class="item-portfolio">
 			<div class="image-portfolio margin-right">
 				<img src="Images\site.JPG">
 			</div>
@@ -155,6 +171,9 @@
 		</form>
 	</div>
 </section>
+<section class="info-section">
+	<h3>Nouveau portfolio en cours de développement !</h3>
+</section>
 <footer class="copyright">
 	<div class="bas" id="bas">
 		<a href="#navigation">
@@ -162,5 +181,18 @@
 	</div>
 	<p>&copy; 2020 Granier Antoine</p>
 </footer>
+<script>
+	let info = document.querySelector(".info-section");
+
+	document.addEventListener('scroll',() => {
+			let bottom  = document.documentElement.scrollTop + window.innerHeight;
+			console.log(bottom);
+		if(window.innerHeight < bottom) {
+			info.style.visibility = "hidden";
+		} else {
+			info.style.visibility = "visible";
+		}
+	});
+</script>
 </body>
 </html>
